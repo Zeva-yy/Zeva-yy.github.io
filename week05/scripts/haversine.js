@@ -34,7 +34,7 @@ function calculateDistance(lat,lon){
 }
 
 let elLocate = document.getElementById("locate");
-elLocate.addEventListener("click",function(){
+elLocate.addEventListener("click", function () {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
         let elLat = document.getElementById("lat");

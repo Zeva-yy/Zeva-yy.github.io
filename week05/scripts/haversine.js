@@ -5,8 +5,8 @@ function haversine(lat1, lon1, lat2, lon2){
     lat1 = lat1.toRad();
     lat2 = lat2.toRad();
 
-    let a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
-    let c = 2* Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+    let a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(Lat1) * Math.cos(Lat2);
+    let c = 2 * Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
     let d = R * c;
 
     return roundVal(d);
@@ -35,8 +35,8 @@ function calculateDistance(lat,lon){
 
 let elLocate = document.getElementById("locate");
 elLocate.addEventListener("click",function(){
-    if (navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(function(position){
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
         let elLat = document.getElementById("lat");
         let elLong = document.getElementById("long");
         let elDepulze = document.getElementById("depulze");
@@ -46,13 +46,13 @@ elLocate.addEventListener("click",function(){
         let userLat = position.coords.latitude;
         let userLong = position.coords.longtitude;
 
-        let distances = calculateDistance(userLat, userLong);
+        let distances = calculateDistances(userLat, userLong);
 
         elLat.innerHTML = "Your latitude : " + userLat;
         elLong.innerHTML = "Your longitude : " + userLong;
         elDepulze.innerHTML = "Distance to De Pulze, CJ is " + distances[0];
         elSunway.innerHTML = "Distance to Sunway Pyramid is " + distances[1];
-        elKlcc.innerHTML = "Distance to KLCC is " + distances[3];
+        elKlcc.innerHTML = "Distance to KLCC is " + distances[2];
     
      });
     } else {

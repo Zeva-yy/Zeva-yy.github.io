@@ -9,7 +9,7 @@ function haversine(lat1, lon1, lat2, lon2){
     let c = 2* Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
     let d = R * c;
 
-    return roundVal(d);
+    return roundVa(d);
 
 }
 

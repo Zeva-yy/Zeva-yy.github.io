@@ -1,7 +1,7 @@
 function haversine(lat1, lon1, lat2, lon2){
     let R = 6371;//earth radius in KM
-    let dLat = (lat2-lat1).toRad();
-    let dLon = (lon2-lon1).toRad();
+    let dLat = (lat2 - lat1).toRad();
+    let dLon = (lon2 - lon1).toRad();
     lat1 = lat1.toRad();
     lat2 = lat2.toRad();
 
@@ -15,7 +15,7 @@ function haversine(lat1, lon1, lat2, lon2){
 
 if(typeof Number.prototype.toRad == "undefined"){
     Number.prototype.toRad = function() {
-        return this * Math.PI /180;
+        return this * Math.PI / 180;
     }
 }
 
@@ -25,7 +25,7 @@ function roundVal(val){
     return result;
 }
 
-function calculateDistance(lat,lon){
+function calculateDistances(lat,lon){
     let d1 = haversine(lat,lon,2.922562, 101.650965);//de pulze, cyberjaya
     let d2 = haversine(lat,lon,3.073056, 101.607787);//Sunway Pyramid
     let d3 = haversine(lat,lon,3.158761, 101.714524);//KLCC

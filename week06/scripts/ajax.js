@@ -10,7 +10,7 @@ function getRandomUser(){
             let elUserImage = document.getElementById("userImage");
             let elPhone = document.getElementById("phone")
             let elAddress = document.getElementById("address");
-            let elEmail - document.getElementById("email");
+            let elEmail = document.getElementById("email");
 
             elJsonResult.innerHTML=this.response;
         }

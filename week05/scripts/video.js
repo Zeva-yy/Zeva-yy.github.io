@@ -29,5 +29,9 @@ window.onload = function(){
         let value = (100 / video.duration) * video.currentTime;
         seekBar.value = value;
     });
-    //test
+   
+    let volumeCtrl = document.getElementById("volume");
+    volumeCtrl.addEventListener("change", function () {
+        video.volome = volumeCtrl.value;
+    });
 };

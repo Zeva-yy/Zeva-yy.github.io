@@ -52,7 +52,7 @@ let app5 = new Vue({
 
 let app6 = new Vue({
     el: "#app6",
-    date: {
+    data: {
         message: "Hello Vue!"
     }
 });

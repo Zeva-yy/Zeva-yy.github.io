@@ -49,3 +49,12 @@ let app5 = new Vue({
         }
     }
 });
+
+let app6 = new Vue({
+    el: "#app6",
+    date: {
+        message: "Hello Vue!"
+    }
+});
+
+//there is one array inside []; the things inside {} is an element. Only 1 el in 1 {}

@@ -9,7 +9,7 @@ let app7 = new Vue({
         groceryList: [
             {
                 id: 0,
-                text: "Vegetable"
+                text: "Vegetables"
             }
             {
                 id: 1,

@@ -72,5 +72,12 @@ function DeleteBooking(id) {
         .then((response) => response.json())
         .then(() => {
             document.getElementById("deleteMsg").innerHTML = "Booking Deleted!"
-            GetBookings();
+            GetBookings(); //changed from copied from sheety
         });
+}
+
+let deleteBooking = document.getElementById("deleteBooking");
+deleteBooking.addEventListener("click", function () {
+    let deleteId = document.getElementById("deleteID").value;
+    DeleteBooking(deleteID);
+});

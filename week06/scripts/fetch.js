@@ -39,7 +39,7 @@ function BookNow(guestName, guestEmail, guestPax) {
         }
     }
     fetch(url, {
-        method: 'POST',
+        method: 'POST', // how to change method
         body: JSON.stringify(body),
         headers: {
             "Content-Type": "application/json"
@@ -63,3 +63,14 @@ bookNow.addEventListener("click", function () {
 
     BookNow(gName, gEmail, gPax);
 });
+
+function DeleteBooking(id) {
+    let url = 'https://api.sheety.co/d741133a721b5c2f6f35fbbf9539a8b6/bookingApp/bookings/' + id;
+    fetch(url, {
+        method: 'DELETE',
+    })
+        .then((response) => response.json())
+        .then(() => {
+            document.getElementById("deleteMsg").innerHTML = "Booking Deleted!"
+            GetBookings();
+        });

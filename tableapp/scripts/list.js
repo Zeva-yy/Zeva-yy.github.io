@@ -3,7 +3,7 @@ function GetBookings() {
     fetch(url)
         .then((response) => response.json())
         .then(json => {
-            // Do something with the data
+            //Do something with the data
             //console.log(json.bookings);
             console.log(json.bookings);
             let bookingList = document.getElementById("booking-list");
@@ -17,7 +17,7 @@ function GetBookings() {
             for (let i = 0; i < json.bookings.length; i++) {
                 let gName = json.bookings[i].name;
                 let gEmail = json.bookings[i].email;
-                let gPax = json.bookings[i].pax;
+                let gPhoneNumber = json.bookings[i].phoneNumber;
                 let gId = json.bookings[i].id;
                 let gRemarks = json.bookings[i].remarks;
                 let buttonId = "delete" + gId;
@@ -26,7 +26,7 @@ function GetBookings() {
                 row.insertCell(0).innerHTML = gId;
                 row.insertCell(1).innerHTML = gName;
                 row.insertCell(2).innerHTML = gEmail;
-                row.insertCell(3).innerHTML = gPax;
+                row.insertCell(3).innerHTML = gPhoneNumber;
                 row.insertCell(4).innerHTML = gRemarks;
                 row.insertCell(5).innerHTML = "<button id='" + buttonId + "' class ='btn btn-danger'>Delete</button>";
 

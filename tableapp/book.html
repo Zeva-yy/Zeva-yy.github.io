@@ -9,7 +9,7 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <style>
         .jumbotron {
-            background-color: silver;
+            background-color: gold;
         }
     </style>
 </head>
@@ -73,6 +73,12 @@
                     <label for="userRemarks">Tell us your concern</label>
                     <textarea class="form-control" id="userRemarks" rows="3"></textarea>
                 </div>
+                <!-- userDateTime -->
+                <form action="/action_page.php">
+                    <label for="userDateTime">Date and time:</label>
+                    <input type="datetime-local" id="userDateTime" name="userDateTime">
+                </form>
+                <br>
                 <button type="submit" class="btn btn-primary" id="bookNow">Submit</button>
             </div>
         </div>

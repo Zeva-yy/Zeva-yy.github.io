@@ -20,7 +20,7 @@ function GetBookings() {
                 let gPhoneNumber = json.bookings[i].phoneNumber;
                 let gId = json.bookings[i].id;
                 let gRemarks = json.bookings[i].remarks;
-                let gSlot = json.bookings[i].gSlot;
+                let gSlot = json.bookings[i].slot;
                 let buttonId = "delete" + gId;
 
                 let row = bookingList.insertRow(bookingList.rows.length);

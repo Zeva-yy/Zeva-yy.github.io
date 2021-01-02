@@ -6,7 +6,8 @@ function BookNow(guestName, guestEmail, guestPhoneNumber, guestRemarks) {
             email: guestEmail,
             phoneNumber: guestPhoneNumber,
             remarks: guestRemarks,
-            slot: guestSlot
+            date: guestDate,
+            time: guestTime
         }
     }
     fetch(url, {
@@ -28,8 +29,9 @@ window.addEventListener("load", function () {
         let userEmail = document.getElementById("userEmail").value;
         let userPhoneNumber = document.getElementById("userPhoneNumber").value;
         let userRemarks = document.getElementById("userRemarks").value;
-        let userSlot = document.getElementById("userSlot").value;
+        let userDate = document.getElementById("userDate").value;
+        let userTime = document.getElementById("userTime").value;
 
-        BookNow(userName, userEmail, userPhoneNumber, userRemarks, userSlot);
+        BookNow(userName, userEmail, userPhoneNumber, userRemarks, userDate, userTime);
     });
 });
